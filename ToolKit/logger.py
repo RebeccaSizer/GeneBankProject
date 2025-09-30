@@ -11,7 +11,7 @@ def create_logger():
 
 
     # Create logger
-    logger = logging.getLogger('SeqToolkit_logger')
+    logger = logging.getLogger('ToolKit_logger')
     logger.setLevel(logging.DEBUG)  # Set the root logger level to DEBUG
 
     # Stream handler with INFO level
@@ -21,7 +21,7 @@ def create_logger():
     stream_handler.setFormatter(stream_formatter)
 
     # File handler with ERROR level and rotating file configuration
-    file_handler = RotatingFileHandler(str(parent_directory) + '/logs/SeqToolkit.log',
+    file_handler = RotatingFileHandler(str(parent_directory) + '/logs/ToolKit.log',
                                        maxBytes=500000,  # 500 KB
                                        backupCount=2)
     file_handler.setLevel(logging.ERROR)

@@ -1,6 +1,6 @@
 import requests
 import xmltodict
-from SeqToolkit.logger import logger
+from GeneBankProject.ToolKit.logger import logger
 
 
 class TranscriptIdError(Exception):
