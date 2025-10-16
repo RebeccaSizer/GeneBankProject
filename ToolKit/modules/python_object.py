@@ -23,7 +23,7 @@ class GenBankRecord():
             logging.error(f"Transcript ID not a string: {e}")
     
 
-        # --- protein ID for the translation (NP_...)
+        # --- protein ID for the translation (NP_...) ---
         try:
             for feature in record['GBSeq_feature-table']['GBFeature']:
                 if feature['GBFeature_key'] == 'CDS':
@@ -204,8 +204,6 @@ if __name__ == "__main__":
     print(output.get_dna_sequence)
     print(output.get_rna_sequence)
     output.as_genbank(output.get_rna_sequence)
-
-
 
 """
     print(record)
